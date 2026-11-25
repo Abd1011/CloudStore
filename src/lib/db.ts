@@ -3,8 +3,11 @@ import path from 'path';
 import bcrypt from 'bcryptjs';
 import { MediaFile, Folder, ShareLink, StorageStats, User } from './types';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DB_FILE = path.join(DATA_DIR, 'cloudstore-db.json');
+import os from 'os';
+const BASE_DIR = process.env.VERCEL ? os.tmpdir() : process.cwd();
+const DATA_DIR = path.join(BASE_DIR, 'data');
+//const DATA_DIR = path.join(process.cwd(), 'data');
+//const DB_FILE = path.join(DATA_DIR, 'cloudstore-db.json');
 
 interface DatabaseSchema {
   users: User[];
