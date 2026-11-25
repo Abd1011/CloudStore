@@ -5,7 +5,13 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { StorageConfig } from './types';
 
 // Default storage directory for local fallback
-const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
+import os from 'os';
+const BASE_DIR = process.env.VERCEL ? os.tmpdir() : process.cwd();
+const UPLOAD_DIR = path.join(BASE_DIR, 'uploads');
+const CONFIG_PATH = path.join(BASE_DIR, 'data', 'storage-config.json');
+//const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
+
+
 if (!fs.existsSync(UPLOAD_DIR)) {
   fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 }
