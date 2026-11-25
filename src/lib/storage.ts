@@ -17,7 +17,6 @@ if (!fs.existsSync(UPLOAD_DIR)) {
 }
 
 // Storage settings file path
-const CONFIG_PATH = path.join(process.cwd(), 'data', 'storage-config.json');
 
 export function getStorageConfig(): StorageConfig {
   // Check if persisted config file exists
