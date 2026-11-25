@@ -346,6 +346,13 @@ cloud-store/
 | `→` (Right Arrow) | Lightbox Viewer | Next media file |
 | `←` (Left Arrow) | Lightbox Viewer | Previous media file |
 
+
+
+<img width="1876" height="921" alt="image" src="https://github.com/user-attachments/assets/35b76aef-9270-4571-afd8-6b968eb069d9" />
+
+<img width="727" height="605" alt="image" src="https://github.com/user-attachments/assets/8437056f-54e4-4d8c-b793-d00085f6e92a" />
+
+
 ---
 
 ## 📜 License
